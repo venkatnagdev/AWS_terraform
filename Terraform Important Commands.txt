@@ -1,0 +1,34 @@
+a. terraform init
+b. terraform plan
+c terraform apply
+
+
+1. terraform destroy -target resource_type.resource_logical_name
+
+2. terraform get -update=true
+
+3. terraform output -module=module-name
+
+4.terraform plan -target=module.cloudelligent-vpc ---> only plan specific modules
+
+5.terraform apply -target=module.cloudelligent-vpc ---> only apply specific modules
+
+6.terraform state pull----> ok
+
+7.terraform state push---->danger
+
+8.terraform state rm module.cloudelligent-rds-app1  ----> https://stackoverflow.com/questions/43950097/how-to-import-manual-changes-into-terraform-remote-state
+
+9.terraform show ---> see after deployment
+
+10. terraform state list
+
+#Note: Pull directly from git hub
+
+#https://www.terraform.io/docs/modules/sources.html
+
+11. source = "github.com/quickbooks2018/Terraform-Classic-Modules/modules/vpc"
+
+# ssh generate public key from a private key
+
+12. ssh-keygen -y -f terraform.pem > terraform.pub
